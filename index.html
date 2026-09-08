@@ -1,0 +1,1314 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AHMAD ZONE 🎮 | متجر الألعاب والتطبيقات</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,Tahoma,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000000;
+    color:#172033;
+    transition:.3s;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(212, 86, 86, 0.9490196078431372);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #ffffff;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#2878ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#172033;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#2878ff;
+}
+
+.nav-actions{
+    display:flex;
+    gap:8px;
+}
+
+.nav-btn{
+    border:none;
+    background:#f0f2f7;
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:25px auto;
+    padding:65px 30px;
+    border-radius:28px;
+    color:white;
+    background:
+    linear-gradient(135deg,#2878ff,#7048ff);
+    box-shadow:0 15px 35px rgba(40,120,255,.25);
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+    line-height:1.2;
+}
+
+.hero p{
+    font-size:17px;
+    opacity:.9;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.search-box{
+    background:white;
+    display:flex;
+    max-width:650px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:17px;
+    font-size:16px;
+    color:#222;
+}
+
+.search-box button{
+    border:none;
+    background:#172033;
+    color:white;
+    padding:0 25px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px 60px;
+}
+
+.section-title{
+    margin:35px 0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.section-title h2{
+    font-size:25px;
+}
+
+.section-title span{
+    color:#2878ff;
+    font-size:14px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    padding-bottom:8px;
+}
+
+.category{
+    white-space:nowrap;
+    border:none;
+    background:white;
+    padding:13px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+    font-weight:bold;
+}
+
+.category.active,
+.category:hover{
+    background:#2878ff;
+    color:white;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.stat-icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.stat h3{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.stat p{
+    color:#7b8392;
+    font-size:13px;
+}
+
+/* GAMES */
+
+.games{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.game{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.game:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.game-cover{
+    height:160px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    background:linear-gradient(135deg,#2878ff,#7048ff);
+}
+.game-cover img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+
+.game:nth-child(2) .game-cover{
+    background:linear-gradient(135deg,#ff5f6d,#ffc371);
+}
+
+.game:nth-child(3) .game-cover{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.game:nth-child(4) .game-cover{
+    background:linear-gradient(135deg,#654ea3,#eaafc8);
+}
+
+.game-body{
+    padding:17px;
+}
+
+.game-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.game-title h3{
+    font-size:18px;
+}
+
+.favorite{
+    border:none;
+    background:#f0f2f6;
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.favorite.active{
+    background:#ffe8ed;
+}
+
+.game-description{
+    color:#7b8392;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#ffad00;
+    margin-bottom:12px;
+}
+
+.rating span{
+    color:#777;
+    font-size:13px;
+}
+
+.game-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.size{
+    color:#7b8392;
+    font-size:12px;
+}
+
+.download{
+    border:none;
+    background:#2878ff;
+    color:white;
+    padding:9px 15px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.download:hover{
+    background:#155dcc;
+}
+
+/* APPS */
+
+.apps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:15px;
+}
+
+.app{
+    background:white;
+    padding:17px;
+    border-radius:18px;
+    display:flex;
+    gap:14px;
+    align-items:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.app-icon{
+    width:65px;
+    height:65px;
+    border-radius:16px;
+    background:#e9eef8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    flex-shrink:0;
+}
+
+.app-info{
+    flex:1;
+}
+
+.app-info h3{
+    margin-bottom:6px;
+}
+
+.app-info p{
+    color:#7b8392;
+    font-size:12px;
+    margin-bottom:9px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:2000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:100%;
+    max-width:500px;
+    border-radius:22px;
+    padding:25px;
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.close{
+    border:none;
+    background:#f0f2f6;
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.modal-cover{
+    height:150px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2878ff,#7048ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    margin-bottom:18px;
+}
+
+.modal-box p{
+    color:#697386;
+    line-height:1.8;
+    margin:10px 0;
+}
+
+.modal-download{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#2878ff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#172033;
+    color:white;
+    padding:45px 20px;
+    margin-top:30px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+.footer-column h3{
+    margin-bottom:15px;
+}
+
+.footer-column p,
+.footer-column a{
+    color:#aeb6c5;
+    font-size:14px;
+    line-height:2;
+    text-decoration:none;
+    display:block;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid #30394b;
+    text-align:center;
+    color:#9da6b6;
+    font-size:13px;
+}
+
+/* DARK MODE */
+
+body.dark{
+    background:#101522;
+    color:#f1f3f7;
+}
+
+body.dark header{
+    background:#151b29;
+    border-color:#242c3c;
+}
+
+body.dark .nav-links a{
+    color:#f1f3f7;
+}
+
+body.dark .nav-btn,
+body.dark .category,
+body.dark .stat,
+body.dark .game,
+body.dark .app,
+body.dark .modal-box{
+    background:#181f2d;
+    color:#f1f3f7;
+}
+
+body.dark .game-description,
+body.dark .app-info p,
+body.dark .stat p,
+body.dark .size,
+body.dark .modal-box p{
+    color:#aeb6c5;
+}
+
+body.dark .favorite{
+    background:#252d3c;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        margin:15px;
+        padding:45px 22px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-content{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:450px){
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head><link rel="stylesheet" href="css/style.css">
+
+<body>
+
+  
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+AHMAD <span>ZONE</span> 🎮
+</div>
+
+<nav class="nav-links">
+
+<a href="#home">الرئيسية</a>
+<a href="#games">الألعاب</a>
+<a href="#apps">التطبيقات</a>
+<a href="#about">حول الموقع</a>
+
+</nav>
+
+<div class="nav-actions">
+
+<button class="nav-btn" onclick="toggleDark()">🌙</button>
+
+<button class="nav-btn" onclick="scrollToGames()">🎮</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+اكتشف عالم الألعاب والتطبيقات 🚀
+</h1>
+
+<p>
+مرحبًا بك في AppZone، منصتك لاكتشاف أفضل الألعاب والتطبيقات بطريقة سهلة وسريعة.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="ابحث عن لعبة أو تطبيق..."
+onkeyup="searchAll()"
+>
+
+<button>🔍</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- CATEGORIES -->
+
+<div class="section-title">
+
+<h2>التصنيفات</h2>
+
+<span>اكتشف المزيد</span>
+
+</div>
+
+<div class="categories">
+
+<button class="category active" onclick="filterCategory('all',this)">
+الكل
+</button>
+
+<button class="category" onclick="filterCategory('games',this)">
+🎮 ألعاب
+</button>
+
+<button class="category" onclick="filterCategory('apps',this)">
+📱 تطبيقات
+</button>
+
+<button class="category" onclick="filterCategory('tools',this)">
+🛠️ أدوات
+</button>
+
+<button class="category" onclick="filterCategory('music',this)">
+🎵 موسيقى
+</button>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-icon">🎮</div>
+
+<h3>1,250+</h3>
+
+<p>لعبة</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">📱</div>
+
+<h3>850+</h3>
+
+<p>تطبيق</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">⬇️</div>
+
+<h3>2M+</h3>
+
+<p>تحميل</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">⭐</div>
+
+<h3>4.8</h3>
+
+<p>متوسط التقييم</p>
+
+</div>
+
+</div>
+
+
+<!-- GAMES -->
+
+<div class="section-title" id="games">
+
+<h2>🔥 ألعاب مميزة</h2>
+
+<span>الأكثر شعبية</span>
+
+</div>
+
+
+<div class="games">
+
+
+<div class="game" data-category="games" data-name="Speed Racing">
+
+<div class="game-cover">
+    <img src="images/carparking.jpg" alt="Car Parking Multiplayer">
+</div>
+
+
+
+<div class="game-body">
+
+<div class="game-title">
+
+<h3>Car Parking Multiplayer</h3>
+
+<button class="favorite" onclick="favoriteGame(this)">
+♡
+</button>
+
+</div>
+
+<p class="game-description">
+سباقات سيارات سريعة ومنافسات قوية.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ <span>4.9</span>
+</div>
+
+<div class="game-footer">
+
+<span class="size">120 MB</span>
+
+<button class="download" onclick="showDetails('Speed Racing','🏎️')">
+التفاصيل
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="game" data-category="games" data-name="War Battle">
+
+<div class="game-cover">
+⚔️
+</div>
+
+<div class="game-body">
+
+<div class="game-title">
+
+<h3>War Battle</h3>
+
+<button class="favorite" onclick="favoriteGame(this)">
+♡
+</button>
+
+</div>
+
+<p class="game-description">
+معارك ملحمية ومهمات مليئة بالإثارة.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ <span>4.7</span>
+</div>
+
+<div class="game-footer">
+
+<span class="size">250 MB</span>
+
+<button class="download" onclick="showDetails('War Battle','⚔️')">
+التفاصيل
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="game" data-category="games" data-name="Football Pro">
+
+<div class="game-cover">
+⚽
+</div>
+
+<div class="game-body">
+
+<div class="game-title">
+
+<h3>Football Pro</h3>
+
+<button class="favorite" onclick="favoriteGame(this)">
+♡
+</button>
+
+</div>
+
+<p class="game-description">
+عش أجواء كرة القدم والمنافسات العالمية.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ <span>4.8</span>
+</div>
+
+<div class="game-footer">
+
+<span class="size">180 MB</span>
+
+<button class="download" onclick="showDetails('Football Pro','⚽')">
+التفاصيل
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="game" data-category="games" data-name="Adventure World">
+
+<div class="game-cover">
+🌍
+</div>
+
+<div class="game-body">
+
+<div class="game-title">
+
+<h3>Adventure World</h3>
+
+<button class="favorite" onclick="favoriteGame(this)">
+♡
+</button>
+
+</div>
+
+<p class="game-description">
+استكشف عالمًا واسعًا مليئًا بالمغامرات.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐ <span>4.6</span>
+</div>
+
+<div class="game-footer">
+
+<span class="size">320 MB</span>
+
+<button class="download" onclick="showDetails('Adventure World','🌍')">
+التفاصيل
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- APPS -->
+
+<div class="section-title" id="apps">
+
+<h2>📱 تطبيقات مميزة</h2>
+
+<span>مختارة لك</span>
+
+</div>
+
+
+<div class="apps">
+
+
+<div class="app" data-category="apps" data-name="Music Player">
+
+<div class="app-icon">
+🎵
+</div>
+
+<div class="app-info">
+
+<h3>Music Player</h3>
+
+<p>مشغل موسيقى • 25 MB</p>
+
+<button class="download"
+onclick="showDetails('Music Player','🎵')">
+فتح
+</button>
+
+</div>
+
+</div>
+
+
+<div class="app" data-category="apps" data-name="Photo Editor">
+
+<div class="app-icon">
+📷
+</div>
+
+<div class="app-info">
+
+<h3>Photo Editor</h3>
+
+<p>تحرير الصور • 35 MB</p>
+
+<button class="download"
+onclick="showDetails('Photo Editor','📷')">
+فتح
+</button>
+
+</div>
+
+</div>
+
+
+<div class="app" data-category="tools" data-name="Smart Tools">
+
+<div class="app-icon">
+🛠️
+</div>
+
+<div class="app-info">
+
+<h3>Smart Tools</h3>
+
+<p>أدوات ذكية • 18 MB</p>
+
+<button class="download"
+onclick="showDetails('Smart Tools','🛠️')">
+فتح
+</button>
+
+</div>
+
+</div>
+
+
+<div class="app" data-category="music" data-name="Sound Studio">
+
+<div class="app-icon">
+🎧
+</div>
+
+<div class="app-info">
+
+<h3>Sound Studio</h3>
+
+<p>صناعة الموسيقى • 45 MB</p>
+
+<button class="download"
+onclick="showDetails('Sound Studio','🎧')">
+فتح
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="modal-top">
+
+<h2 id="modalTitle">
+تفاصيل اللعبة
+</h2>
+
+<button class="close" onclick="closeModal()">
+✕
+</button>
+
+</div>
+
+<div class="modal-cover" id="modalIcon">
+🎮
+</div>
+
+<h3 id="modalName">
+اسم اللعبة
+</h3>
+
+<p id="modalDescription">
+هذه صفحة تفاصيل التطبيق أو اللعبة.
+</p>
+
+<p>
+⭐ تقييم المستخدمين: 4.8 / 5
+</p>
+
+<p>
+📦 الحجم: 120 MB
+</p>
+
+<a href="https://car-parking-multiplayer.ar.uptodown.com/android/dw" class="modal-download" target="_blank">
+    ⬇️ تحميل الآن
+</a>
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer id="about">
+
+<div class="footer-content">
+
+<div class="footer-column">
+
+<h3>AppZone</h3>
+
+<p>
+منصة عصرية لاكتشاف الألعاب والتطبيقات المميزة.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>روابط</h3>
+
+<a href="#home">الرئيسية</a>
+
+<a href="#games">الألعاب</a>
+
+<a href="#apps">التطبيقات</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>تواصل معنا</h3>
+
+<p>📧 support@appzone.com</p>
+
+<p>🌐 AppZone</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 AppZone — جميع الحقوق محفوظة
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* SEARCH */
+
+function searchAll(){
+
+    let value =
+    document.getElementById("search")
+    .value
+    .toLowerCase();
+
+    let items =
+    document.querySelectorAll(".game,.app");
+
+    items.forEach(function(item){
+
+        let name =
+        item.getAttribute("data-name")
+        .toLowerCase();
+
+        if(name.includes(value)){
+            item.style.display="";
+        }else{
+            item.style.display="none";
+        }
+
+    });
+
+}
+
+
+/* FAVORITE */
+
+function favoriteGame(button){
+
+    button.classList.toggle("active");
+
+    if(button.innerHTML==="♡"){
+        button.innerHTML="❤️";
+    }else{
+        button.innerHTML="♡";
+    }
+
+}
+
+
+/* DETAILS */
+
+function showDetails(name,icon){
+
+    document.getElementById("modalTitle")
+    .innerText="تفاصيل";
+
+    document.getElementById("modalName")
+    .innerText=name;
+
+    document.getElementById("modalIcon").innerHTML =
+'<img src="images/carparking.jpg" alt="Car Parking Multiplayer" style="width:100%;height:150px;object-fit:cover;border-radius:18px;">';  
+
+
+    document.getElementById("modalDescription")
+    .innerText=
+    "استمتع بتجربة رائعة مع "+name+
+    ". يمكنك إضافة رابط التحميل الحقيقي لهذه اللعبة أو التطبيق لاحقًا.";
+
+    document.getElementById("modal")
+    .classList.add("show");
+
+}
+
+
+/* CLOSE */
+
+function closeModal(){
+
+    document.getElementById("modal")
+    .classList.remove("show");
+
+}
+
+
+window.onclick=function(event){
+
+    let modal =
+    document.getElementById("modal");
+
+    if(event.target===modal){
+        closeModal();
+    }
+
+}
+
+
+/* DARK MODE */
+
+function toggleDark(){
+
+    document.body.classList.toggle("dark");
+
+}
+
+
+/* CATEGORY */
+
+function filterCategory(category,button){
+
+    document
+    .querySelectorAll(".category")
+    .forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    let items =
+    document.querySelectorAll(".game,.app");
+
+    items.forEach(function(item){
+
+        let itemCategory =
+        item.getAttribute("data-category");
+
+        if(category==="all" ||
+           itemCategory===category){
+
+            item.style.display="";
+
+        }else{
+
+            item.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* SCROLL */
+
+function scrollToGames(){
+
+    document
+    .getElementById("games")
+    .scrollIntoView();
+
+}
+
+
+/* DOWNLOAD */
+
+function fakeDownload(){
+
+    alert(
+        "⬇️ زر التحميل جاهز!\n\n" +
+        "عندما تضع رابط ملف اللعبة الحقيقي هنا، " +
+        "سيبدأ التحميل."
+    );
+
+}
+
+</script>
+
+</body><script src="js/script.js"></script>
+
+</html>
