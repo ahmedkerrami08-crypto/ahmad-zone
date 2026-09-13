@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmedkerrami08-crypto.github.io/ahmad-zone/sitemap.xml
